@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "e34f2dcc-0989-4241-8d4c-a44f90302001",
+		"name": "Santander Tecnologia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Username\": \"dbertolini\",\n\t\"Password\": \"passdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Meetup",
+			"item": [
+				{
+					"name": "getMeetupList()",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44372/api/meetup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"meetup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMeetupById(int id)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44372/api/meetup/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"meetup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMeetup(MeetupDTO meetupDTO)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\":\"Meetup 2\",\n\t\"Location\":\"london,uk\",\n\t\"Due\":\"2020-04-25T00:00:00\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/meetup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"meetup"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inscription",
+			"item": [
+				{
+					"name": "createInscription(InscriptionDTO inscriptionDTO)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 2,\r\n  \"meetupId\": 2,\r\n  \"due\": \"2020-04-24T00:42:18.605Z\",\r\n  \"checkin\": false\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/inscription",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"inscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkinInscription(InscriptionDTO inscriptionDTO)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 2,\r\n  \"meetupId\": 2,\r\n  \"due\": \"2020-04-24T01:11:05.405Z\",\r\n  \"checkin\": false\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/inscription",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"inscription"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Weather",
+			"item": [
+				{
+					"name": "getWeatherByMeetup(int id)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44372/api/weather/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"weather",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forecast (external API)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-rapidapi-host",
+								"value": "aerisweather1.p.rapidapi.com",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-key",
+								"value": "XXXXXXXXX",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aerisweather1.p.rapidapi.com/forecasts/buenosaires,ar",
+							"protocol": "https",
+							"host": [
+								"aerisweather1",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"forecasts",
+								"buenosaires,ar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Beer",
+			"item": [
+				{
+					"name": "getBeerBoxQuantityByMeetupId(int id)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbmlzdHJhdG9yIiwiZW1haWwiOiJkYmVydG9saW5pIiwianRpIjoiZDBhOTc2NWYtZjUwZS00YzEzLWJmNzMtODdjMDZmODE1MWM0IiwiZXhwIjoxNTg3NzU4NDc3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.UEKNctiENjzhii5NeYfbc5rzLFLFkz0rGbQ5Ypz6cl0"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44372/api/beer/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"beer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

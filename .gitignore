@@ -1,0 +1,12 @@
+/MeetupSantander.API/obj
+/MeetupSantander.API/bin
+/MeetupSantander.API.Test/bin
+/MeetupSantander.API.Test/obj
+/MeetupSantander.API.Domain/obj
+/MeetupSantander.API.Domain/bin
+/MeetupSantander.API.DataMySQL/obj
+/MeetupSantander.API.DataMySQL/bin
+/MeetupSantander.API.Data/obj
+/MeetupSantander.API.Data/bin
+/MeetupSantander.API.Contract/obj
+/MeetupSantander.API.Contract/bin
